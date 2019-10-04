@@ -8,18 +8,21 @@
 		display: flex
 		align-items: center
 		text-align: right
+	&__contacts
+		margin-top: 4px
 	&__address
 		display: flex
 		flex-direction: column
-	&__button
-		margin-left: 30px	
+		font-size: 13px
 	&__phone
 		color: $text-color
 		font-size: 20px
-		font-weight: 400
+		+bold
 		text-decoration: none
-		margin-top: 10px
+		margin-top: 7px
 		display: inline-block
+	&__button
+		margin-left: 30px	
 @media (max-width: 768px)
 	.navbar
 		&__contacts

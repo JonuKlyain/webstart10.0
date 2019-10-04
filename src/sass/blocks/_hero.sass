@@ -2,18 +2,23 @@
 	padding: 50px 0
 	&-block
 		display: flex
+	&-image
+		img
+			max-width: 106%
 	&-text
 		flex-basis: 50%
-		padding-right: 120px
+		padding-right: 56px
 		&__title
+			+bold
 			font-size: 41px
 			font-weight: 700
 			line-height: 55px
-			margin-bottom: 41px
+			margin-bottom: 37px
 		&__subtitle
 			display: inline-block
+			+bold
 			font-size: 20px
-			font-weight: 500
+			font-weight: 400
 			margin-bottom: 65px
 	&-list
 		list-style: none
@@ -24,10 +29,14 @@
 			align-items: center
 			margin-bottom: 25px
 		&__text
-			max-width: 300px
+			max-width: 240px
+			+reg
+			font-size: 14px
+			font-weight: 400
+			line-height: 24px
 		&__image
-			width: 40px
-			height: 40px
+			width: 37px
+			height: 37px
 			border: 2px solid $main-color
 			border-radius: 50%
 			display: flex
