@@ -10,6 +10,9 @@
   src: local("../foonts/MuseoSansCyrl-300"), url("../foonts/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../foonts/MuseoSansCyrl-300.woff") format("woff"), url("../foonts/MuseoSansCyrl-300.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Museo Sans Reg', sans-serif;
   font-weight: 300; }
@@ -28,6 +31,16 @@ img {
   .container {
     max-width: 580px;
     width: 90%; } }
+.section {
+  padding: 90px 0; }
+  .section-title {
+    font-family: 'Museo Sans Bold', sans-serif;
+    font-weight: 700;
+    font-size: 24px; }
+  .section-subtitle {
+    display: block;
+    font-size: 16px; }
+
 .button {
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
@@ -36,6 +49,15 @@ img {
   border: none;
   font-size: 13px;
   padding: 18px 30px; }
+  .button:hover {
+    background-color: #ffdb33;
+    cursor: pointer; }
+
+.input {
+  width: 240px;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  padding: 15px 20px; }
 
 .navbar {
   padding: 8px 0; }
@@ -73,6 +95,7 @@ img {
   .navbar__logo {
     width: 90px; } }
 .hero {
+  background-color: #f5f5f5;
   padding: 50px 0; }
   .hero-block {
     display: flex; }
@@ -139,5 +162,68 @@ img {
     margin-bottom: 20px; }
     .hero-list__text {
       font-size: 12px; } }
+.offer {
+  background: #fff url(../img/offer-bg.jpg) center right no-repeat;
+  background-size: contain;
+  position: relative; }
+  .offer:before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white; }
+  .offer__title {
+    width: 350px;
+    line-height: 35px; }
+  .offer__subtitle {
+    width: 240px;
+    margin-bottom: 30px; }
+  .offer-form {
+    padding-right: 90px; }
+  .offer-block {
+    width: 50%;
+    position: relative; }
+    .offer-block__button {
+      width: 100%;
+      min-height: 70px; }
+    .offer-block__input {
+      margin-bottom: 30px;
+      width: 240px; }
+      .offer-block__input:first-child {
+        margin-right: 10px; }
+  .offer-trigger {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 15px; }
+    .offer-trigger__text {
+      max-width: 234px; }
+    .offer-trigger__phone {
+      max-width: 200px; }
+      .offer-trigger__phone .number {
+        font-size: 16px; }
+
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover; }
+    .offer-block__input {
+      width: 100%;
+      margin-bottom: 10px; }
+    .offer-block__button {
+      font-size: 12px; }
+    .offer-trigger {
+      flex-direction: column; }
+      .offer-trigger__phone {
+        margin-top: 20px; } }
+@media (max-width: 768px) {
+  .offer {
+    background: #fff; }
+    .offer-form {
+      padding-right: 0; }
+    .offer-block {
+      width: 100%;
+      padding-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
