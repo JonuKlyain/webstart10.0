@@ -401,11 +401,11 @@ img {
 .modal-dialog {
   position: relative;
   margin: auto;
-  max-width: 570px;
-  width: 90%;
+  max-width: 470px;
   max-height: 674px;
+  height: 90%;
   background-color: #fff;
-  padding: 80px 100px;
+  padding: 0 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -433,11 +433,11 @@ img {
 }
 
 .modal-dialog__subtitle {
-  min-width: 331px;
+  min-width: 341px;
   font-size: 16px;
   line-height: 35px;
-  margin-top: 52px;
-  margin-bottom: 33px;
+  margin-top: 22px;
+  margin-bottom: 23px;
 }
 
 .modal-dialog__input {
@@ -465,7 +465,7 @@ img {
 
 .modal-dialog__close {
   position: absolute;
-  top: -50px;
+  top: -45px;
   right: 0;
   border: none;
   height: 50px;
@@ -479,5 +479,38 @@ img {
 
 .modal-dialog__close:hover {
   color: #ffd200;
+}
+
+.show {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  z-index: 1000;
+}
+
+.show:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+.show:active {
+  background-color: #555;
+}
+
+.show::after {
+  content: '\f077';
+  font-family: FontAwesome;
+  font-size: 15px;
+  line-height: 50px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
