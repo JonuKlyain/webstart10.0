@@ -8,6 +8,7 @@
   <title>Ремонт квартир</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -103,6 +104,40 @@
     </div>
   </section>
 
+  <section class="section portfolio">
+    <div class="container">
+      <h2 class="section-title portfolio__title">
+        Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах
+      </h2>
+
+      <div class="slider">
+        <div class="slider__item">
+          <img class="slider__image" src="img/portfolio/portfolio-img-1.jpg" alt="Картинка">
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/portfolio/portfolio-img-2.jpg" alt="Картинка">
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/portfolio/portfolio-img-3.jpg" alt="Картинка">
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/portfolio/portfolio-img-1.jpg" alt="Картинка">
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/portfolio/portfolio-img-2.jpg" alt="Картинка">
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="img/portfolio/portfolio-img-3.jpg" alt="Картинка">
+        </div>
+      </div>
+
+      <div class="arrows portfolio__arrows">
+        <div class="arrows__left"><img src="img/portfolio/left-arrow.png" alt="Левая кнопка"></div>
+        <div class="arrows__right"><img src="img/portfolio/right-arrow.png" alt="Правая кнопка"></div>
+      </div>
+    </div>
+  </section>
+
   <div class="modal" id="modal">
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="close">&times</button>
@@ -124,6 +159,34 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.arrows__left'),
+        nextArrow: $('.arrows__right'),
+        responsive: [
+            {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    })
+  </script>
 </body>
 
 </html>
