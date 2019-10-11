@@ -389,7 +389,7 @@ img {
   }
 }
 
-.show {
+.hidden {
   display: inline-block;
   background-color: #FF9800;
   width: 50px;
@@ -405,21 +405,25 @@ img {
   z-index: 1000;
 }
 
-.show:hover {
+.hidden:hover {
   cursor: pointer;
   background-color: #333;
 }
 
-.show:active {
+.hidden:active {
   background-color: #555;
 }
 
-.show::after {
+.hidden::after {
   content: '\f077';
   font-family: FontAwesome;
   font-size: 15px;
   line-height: 50px;
   color: #fff;
+}
+
+.show {
+  display: none;
 }
 
 .portfolio {

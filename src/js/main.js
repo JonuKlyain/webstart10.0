@@ -14,14 +14,14 @@ $(document).ready(function() {
 
     setInterval(function() {
         modal.removeClass('modal_active')  
-    }, 5000);
+    }, 15000);
 
 
   $(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-      totop.addClass('show');
-    } else {
+    if ($(window).scrollTop() > 600) {
       totop.removeClass('show');
+    } else {
+      totop.addClass('show');
     }
   });
 

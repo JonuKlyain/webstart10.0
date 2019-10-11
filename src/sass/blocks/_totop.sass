@@ -1,4 +1,5 @@
-.show
+
+.hidden
   display: inline-block
   background-color: #FF9800
   width: 50px
@@ -12,14 +13,18 @@
   transition: background-color .3s
   z-index: 1000
   &:hover 
-   cursor: pointer
-   background-color: #333
+    cursor: pointer
+    background-color: #333
   &:active
-   background-color: #555
+    background-color: #555
   &::after 
-   content: '\f077'
-   font-family: FontAwesome
-   font-size: 15px
-   line-height: 50px
-   color: #fff
+    content: '\f077'
+    font-family: FontAwesome
+    font-size: 15px
+    line-height: 50px
+    color: #fff
+.show
+  display: none
+  
+
 
