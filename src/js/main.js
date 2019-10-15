@@ -1,8 +1,87 @@
 $(document).ready(function() {
     var button = $('#button');
     var modal = $('#modal');
-    var close = $('#close')
+    var close = $('#close');
     var totop = $('#totop');
+    // // var element = $('.element').offset().top;
+  
+    $("#brif-form").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        phone: {
+          required: true
+        }
+      },
+      messages: {
+        username: "",
+        email: "",
+        phone: ""
+      },
+      errorClass: "invalid",
+      errorElement: "em"
+    });
+
+    $("#offer-form").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        phone: {
+          required: true
+        }
+      },
+      messages: {
+        username: "",
+        phone: ""
+      },
+      errorClass: "invalid",
+      errorElement: "span"
+    });
+
+    $("#modal-form").validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        phone: {
+          required: true
+        }
+      },
+      messages: {
+        username: "",
+        phone: ""
+      },
+      errorClass: "invalid",
+      errorElement: "span"
+    });
+
+    jQuery(function($){
+      $(".phone").mask("+375 (99) 999-99-99");
+    });
+
+
+    $(window).scroll(function() {
+      var element = $('.element').offset().top;
+
+      if ($(window).scrollTop() > 1400) {
+        element.addClass('slideUp');
+      }
+      // else {
+      //   element.removeClass('slideUp');
+      // }
+    });
 
     button.on('click', function() {
         modal.addClass('modal_active');
@@ -20,7 +99,8 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if ($(window).scrollTop() > 600) {
       totop.removeClass('show');
-    } else {
+    } 
+    else {
       totop.addClass('show');
     }
   });

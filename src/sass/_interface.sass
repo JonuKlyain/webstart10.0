@@ -47,6 +47,36 @@ img
 	&:focus
 		border: 1px solid $main-color
 		box-shadow: 0 0 5px $main-color
+
 .arrows
 	&__right, &__left
 		cursor: pointer
+
+.invalid
+	border: 1px solid $error
+	box-shadow: 0 0 5px $error
+	transition: 0.3s
+
+.input-group
+	position: relative
+
+
+em.invalid
+	position: absolute
+	top: 22px
+	left: -200px
+	border-color: white
+	box-shadow: none
+span.invalid
+	position: absolute
+	top: 255px
+	left: 20px
+	border-color: white
+	box-shadow: none
+@media (max-width: 1200px)
+	em.invalid
+		display: none
+		border: none
+
+
+
