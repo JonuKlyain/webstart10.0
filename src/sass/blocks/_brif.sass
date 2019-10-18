@@ -1,7 +1,7 @@
 .brif
-    background-image: url('../img/brif/interview-bg.png'), url('../img/brif/brif-bg.jpg')
-    background-position: left center, right center
-    background-size: 50%, contain
+    background-image: url('../img/brif/interview-bg.jpg'), url('../img/brif/brif-bg.jpg')
+    background-position: left center, right top
+    background-size: 50%, cover
     background-repeat: repeat-y, no-repeat
     &-block
         display: flex
@@ -14,10 +14,12 @@
 .interview
     &__title
         +bold
+        color: $title-color
         font-size: 22px
         line-height: 33px
     &__subtitle
         display: block
+        color: $title-color
         font-size: 16px
         line-height: 45px
         margin-top: 50px
@@ -26,6 +28,7 @@
         list-style: none
         padding: 0
         +bold
+        color: $title-color
         font-size: 18px
     &__item
         margin-bottom: 26px

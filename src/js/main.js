@@ -4,6 +4,91 @@ $(document).ready(function() {
     var close = $('#close');
     var totop = $('#totop');
     // // var element = $('.element').offset().top;
+
+
+
+    new WOW().init();
+
+    $('.slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow: $('.arrows__left'),
+      nextArrow: $('.arrows__right'),
+      responsive: [
+          {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+
+    $('#offer-form').on('submit', function name(event){
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize(),
+        success: function(response) {
+          console.log('Прибыли данные: ' + response);
+          $('#offer-form')[0].reset();
+          $('.submitted-form').fadeIn(1000);
+          $('.submitted-form').fadeOut(4000);
+        },
+        error: function(jqXHR, textStatus, errorThrow) {
+          console.error(jqXHR + " " + textStatus);
+        }
+      });
+    });
+
+
+    $('#brif-form').on('submit', function name(event){
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize(),
+        success: function(response) {
+          console.log('Прибыли данные: ' + response);
+          $('#brif-form')[0].reset();
+          $('.submitted-form').fadeIn(1000);
+          $('.submitted-form').fadeOut(4000);
+        },
+        error: function(jqXHR, textStatus, errorThrow) {
+          console.error(jqXHR + " " + textStatus);
+        }
+      });
+    });
+
+
+    $('#modal-form').on('submit', function name(event){
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize(),
+        success: function(response) {
+          console.log('Прибыли данные: ' + response);
+          $('#modal-form')[0].reset();
+          $('.modal_active').fadeOut(500);
+        },
+        error: function(jqXHR, textStatus, errorThrow) {
+          console.error(jqXHR + " " + textStatus);
+        }
+      });
+    });
+
   
     $("#brif-form").validate({
       rules: {
@@ -91,9 +176,9 @@ $(document).ready(function() {
         modal.removeClass('modal_active');
     })
 
-    setInterval(function() {
-        modal.removeClass('modal_active')  
-    }, 15000);
+    // setInterval(function() {
+    //     modal.removeClass('modal_active')  
+    // }, 15000);
 
 
   $(window).scroll(function() {
